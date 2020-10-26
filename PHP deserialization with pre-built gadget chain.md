@@ -22,17 +22,13 @@
 - Il me faut le SECRET_KEY pour créer mon gadget donc je cherche la keyword et je tombe sur ça.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770312787452493834/unknown.png?width=1095&height=630"/><br/><br/>
 - Maintenant je passe au développement du gadget chain.<br/>
-```PHP
-<?php 
 
-	$rce = "";
 
-	$secretKey = "7sbqv3xwfjipv4gmsofrqxlj4dcqr5dl";
-	
-	echo $payload = urlencode('{"token":"' . $object . '", "sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
 
-?>
-```
+
+
+
+
 <br/>
 - Pour créer l'object (RCE) qu'on voudra faire exécuter au serveur-web. Je fais l'usage de PHPGGC, mais qu'est-ce que c'est au juste ?<br/>
 - PHPGGC est une bibliothèque de payloads unserialize() et un outil qui les génère. Lorsqu'il y a une désérialisation sur un site Web dont vous n'avez pas le code, ou simplement lorsque vous essayez de créer un exploit, cet outil vous permet de générer la payload sans avoir à passer par les étapes fastidieuses de recherche de gadgets et de combinaison. Il peut être vu comme l'équivalent de ysoserial ou même frohoff, mais ce pour le langage PHP. Actuellement, l'outil prend en charge les frameworks: CodeIgniter4, Doctrine, Drupal7, Guzzle, Laravel, Magento, Monolog, Phalcon, Podio, Slim, SwiftMailer, Symfony, Wordpress, Yii et ZendFramework.<br/>
