@@ -23,4 +23,13 @@
 <img src="https://media.discordapp.net/attachments/768928242467340328/770312787452493834/unknown.png?width=1095&height=630"/><br/><br/>
 - Maintenant je passe au développement du gadget chain.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770316142191181834/unknown.png"/><br/><br/>
--  
+- Pour créer l'object (RCE) qu'on voudra faire exécuter au serveur-web. Je fais l'usage de PHPGGC, mais qu'est-ce que c'est au juste ?<br/>
+- PHPGGC est une bibliothèque de payloads unserialize() et un outil qui les génère. Lorsqu'il y a une désérialisation sur un site Web dont vous n'avez pas le code, ou simplement lorsque vous essayez de créer un exploit, cet outil vous permet de générer la payload sans avoir à passer par les étapes fastidieuses de recherche de gadgets et de combinaison. Il peut être vu comme l'équivalent de ysoserial ou même frohoff, mais ce pour le langage PHP. Actuellement, l'outil prend en charge les frameworks: CodeIgniter4, Doctrine, Drupal7, Guzzle, Laravel, Magento, Monolog, Phalcon, Podio, Slim, SwiftMailer, Symfony, Wordpress, Yii et ZendFramework.<br/>
+- La source se trouve ici : https://github.com/ambionics/phpggc.<br/>
+- En faisant attention, on a pu voir que le serveur-web utilisait le framework Symfony donc ça tombe bien vu que PHPGGC accepte ce framework.<br/>
+- La version du framework était 4.3.6.<br/><br/>
+<img src="https://media.discordapp.net/attachments/768928242467340328/770318095209725952/unknown.png"/><br/><br/>
+- On a plus qu'à générer la payload avec la commande qu'on voudra faire exécuter au serveur-web.<br/>
+- L'énoncé nous dit qu'on doit supprimer le fichier morale.txt qui se trouve dans le répertoire "/home/carlos".<br/>
+- Je vais donc devoir générer une payload adéquate.<br/><br/>
+<img src="https://media.discordapp.net/attachments/768928242467340328/770319551245582336/unknown.png"/><br/><br/>
