@@ -18,4 +18,9 @@
 - On sait maintenant que le framework Symfonie de la version 4.3.6 est utilisé.<br/>
 - Maintenant on check les ressources du site-web pour trouver le fichier PHP de configuration.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770311153867554927/unknown.png"/><br/><br/>
-- Le fichier phpinfo.php existe, donc je le renvoie vers le repeater.   
+- Le fichier phpinfo.php existe donc je le renvoie vers le repeater.<br/>
+- Il me faut le SECRET_KEY pour créer mon gadget donc je cherche la keyword et je tombe sur ça.<br/><br/>
+<img src="https://media.discordapp.net/attachments/768928242467340328/770312787452493834/unknown.png?width=1095&height=630"/><br/><br/>
+- Maintenant je passe au développement du gadget chain.<br/><br/>
+<img src="https://media.discordapp.net/attachments/768928242467340328/770316142191181834/unknown.png"/><br/><br/>
+-  
