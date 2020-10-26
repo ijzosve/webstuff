@@ -2,7 +2,7 @@
 - En informatique, la sérialisation est le codage d'une information sous la forme d'une suite d'informations plus petites pour, par exemple, sa sauvegarde ou son transport sur le réseau. Ce qu'on va faire là c'est l'inverse de ce procédé. On va décoder des informations appartenant au système Symfonie.<br/>
 ## Exploitation
 - En premier temps je lance Burpsuite et je le laisse tourner en arrière-plan pendant que je fais ma prochaine manipulation.<br/>
-- Ensuite je me login pour générer des requêtes. L'énnonce nous indique que le login par défaut est "wiener" et "peter".<br/><br/>
+- Ensuite je me login pour générer des requêtes. L'énoncé nous indique que le login par défaut est "wiener" et "peter".<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770030149490966548/unknown.png"/><br/><br/>
 - Je check l'historique des requêtes et je sélectionne l'index où le procédé du login a été sérialisé.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770031231060017192/unknown.png?width=1195&height=890"/><br/><br/>
