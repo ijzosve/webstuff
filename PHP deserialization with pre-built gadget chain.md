@@ -33,7 +33,7 @@
 - J'ai plus qu'à générer la payload en ajoutant la commande de supprésion de fichier tout en implémentant la payload en base64.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770319551245582336/unknown.png"/><br/><br/>
 - Pour que le résultat soit en une ligne faites "base64 -w 0".<br/><br/>
-<img src="https://media.discordapp.net/attachments/768928242467340328/770321071014019072/unknown.png?width=1440&height=202"/><br/><br/>
+<img src="https://media.discordapp.net/attachments/768928242467340328/770323805930913812/unknown.png?width=1440&height=250"/><br/><br/>
 - Notre gadget chain est enfin terminé, maintenant on fait exécuter le fichier .php, qu'importe le serveur, personnellement je l'héberge dans mon réseau local.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770322237214818304/unknown.png?width=1440&height=394"/><br/><br/>
 - Hop, on a notre gadget chain. Pour la mettre en oeuvre on a plus qu'à C/C notre payload dans l'index qu'on a redirigé vers le repeater et on a notre RCE ;].<br/><br/>
