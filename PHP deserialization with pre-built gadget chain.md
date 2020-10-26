@@ -55,9 +55,9 @@
 	echo $payload = urlencode('{"token":"' . $object . '", "sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
 
 ?>
-
 ```
-<br/>
+
+</br>
 - Notre gadget chain est enfin terminé, maintenant on fait exécuter le fichier .php, qu'importe le serveur, personnellement je l'héberge dans mon réseau local.<br/><br/>
 <img src="https://media.discordapp.net/attachments/768928242467340328/770322237214818304/unknown.png?width=1440&height=394"/><br/><br/>
 - Hop, on a notre gadget chain. Pour la mettre en oeuvre on a plus qu'à C/C notre payload dans l'index qu'on a redirigé vers le repeater et on a notre RCE ;].<br/><br/>
