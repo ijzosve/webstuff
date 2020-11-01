@@ -73,12 +73,9 @@ const obj = {
 <img src="https://media.discordapp.net/attachments/771819360109068328/772451369742368808/image-3-1024x219.png"><br>
 ## Exploitation
 - URL : http://www.gob.com.pl/CTF/prototype%20pollution/?x={%22__proto__%22:{%22steins%22:%22%3Csvg/onload=alert(%27XSS%27)%3E%22}}
-<img src="https://media.discordapp.net/attachments/768928242467340328/772471742022811688/unknown.png">
+<img src="https://media.discordapp.net/attachments/768928242467340328/772471742022811688/unknown.png"><br>
 ### Manuel
-- Itère à travers tous les prototypes dans l'objet "**monjson**". La seule propriété est ``__proto__``
-
-- Check si ``monjson.__proto__`` existe, là c'est le cas
-
-- Itère à travers toutes les propriétés dans ``steins.__proto__``. La seule propriété est "x"
-
-- Assigne ``monjson.__proto__.x`` = ``steins.__proto__.x`` parce-que ``monjson.__proto__`` pointe au **Object.prototype**, du coup ensuite le prototype est pollué.
+- Itère à travers tous les prototypes dans l'objet "**monjson**". La seule propriété est ``__proto__``<br>
+- Check si ``monjson.__proto__`` existe, là c'est le cas<br>
+- Itère à travers toutes les propriétés dans ``steins.__proto__``. La seule propriété est "x"<br>
+- Assigne ``monjson.__proto__.x`` = ``steins.__proto__.x`` parce-que ``monjson.__proto__`` pointe au **Object.prototype**, du coup ensuite le prototype est pollué.<br>
