@@ -49,17 +49,16 @@ if(parametres.length>1)
 </script>
 </body>
 </html>
-
 ```
+
 ## Contextualisation
-- La pollution de prototype est une vuln spécifique au JS. Il découle d'un modèle d'héritage JS appelé **prototype-based inheritance** . Contrairement à PHP, C++ ou même Java, en JS vous n'avez pas besoin de définir une classe pour créer un objet. Il vous suffit d'utiliser la notation entre accolades et de définir les propriétés.<br>
+- La pollution de prototype est une vuln spécifique au JS. Il découle d'un modèle d'héritage JS appelé **prototype-based inheritance** . Contrairement à PHP, C++ ou même Java, en JS vous n'avez pas besoin de définir une classe pour créer un objet. Il vous suffit d'utiliser la notation entre accolades et de définir les propriétés.
 ```JS
 const obj = {
   prop1: 111,
   prop2: 222,
 }
 ```
-<br>
 - Cet objet a deux propriétés, notamment **prop1** et **prop2**. Figurez-vous que ce ne sont pas les seules propriétés dont nous avons accès. Si on prend un exemple, un simple call de **obj.toString()** nous retourne **"[object Object]"**, ça provient du prototype. Tout objet en JS a un prototype (à l'exception qu'il soit null). Si le prototype n'est pas spécifié il aura comme prototype par défaut : **Object.prototype**.<br>
 ### On peut facilement voir la liste des propriétés de Object.prototype à l'aide de DevTools
 <img src="https://media.discordapp.net/attachments/771819360109068328/772447460215881728/image-1024x351.png"><br>
@@ -70,7 +69,7 @@ const obj = {
 - Dans l'exemple qui va suivre, obj1 a été créé en utilisant la méthode curly bracket de la notation JS, obj2 est créé avec JSON.parse.<br>
 <img src="https://media.discordapp.net/attachments/771819360109068328/772451369742368808/image-3-1024x219.png"><br>
 ## Exploitation
-- URL : http://www.gob.com.pl/CTF/prototype%20pollution/?x={%22__proto__%22:{%22steins%22:%22%3Csvg/onload=alert(%27XSS%27)%3E%22}} <br>
+- URL : http://www.gob.com.pl/CTF/prototype%20pollution/?x={%22__proto__%22:{%22steins%22:%22%3Csvg/onload=alert(%27XSS%27)%3E%22}}
 <img src="https://media.discordapp.net/attachments/768928242467340328/772471742022811688/unknown.png"><br>
 ### Manuel
 - Itère à travers tous les prototypes dans l'objet "**monjson**". La seule propriété est ``__proto__``<br>
