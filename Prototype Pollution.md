@@ -1,5 +1,5 @@
 # Prototype Pollution
-<img src="https://media.discordapp.net/attachments/768928242467340328/772469748205748244/unknown.png">
+<img src="https://media.discordapp.net/attachments/768928242467340328/772469748205748244/unknown.png"><br>
 ```HTML
 <!DOCTYPE html>
 <html>
@@ -50,7 +50,6 @@ if(parametres.length>1)
 </body>
 </html>
 ```
-
 ## Contextualisation
 - La pollution de prototype est une vuln spécifique au JS. Il découle d'un modèle d'héritage JS appelé **prototype-based inheritance** . Contrairement à PHP, C++ ou même Java, en JS vous n'avez pas besoin de définir une classe pour créer un objet. Il vous suffit d'utiliser la notation entre accolades et de définir les propriétés.
 ```JS
